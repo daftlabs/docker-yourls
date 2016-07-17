@@ -14,6 +14,7 @@ RUN mkdir -p ${APP_ROOT} \
   && a2enconf fqdn \
   && a2enmod php5 rewrite
 
+COPY docker/start-yourls.sh /usr/bin/start-yourls.sh
 COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY docker/vhost.conf /etc/apache2/sites-enabled/000-default.conf
 COPY docker/config.php ${APP_ROOT}/user/config.php
