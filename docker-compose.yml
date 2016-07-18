@@ -1,3 +1,10 @@
+db:
+  ports:
+    - "3306:3306"
+  image: mysql:5.6.26
+  environment:
+    - MYSQL_ROOT_PASSWORD=coolpassword
+    - MYSQL_DATABASE=yourls
 web:
   build: .
   ports:
@@ -12,10 +19,3 @@ web:
     - YOURLS_DEBUG=false
     - YOURLS_USERS=default:default
     - YOURLS_SITE=http://set-this-or-the-site-doesnt-work.com/my-blog.asp
-db:
-  ports:
-    - "3306:3306"
-  image: mysql:5.6.26
-  environment:
-    - MYSQL_ROOT_PASSWORD=coolpassword
-    - MYSQL_DATABASE=yourls
