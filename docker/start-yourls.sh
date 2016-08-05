@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
-# env | grep _ >> /etc/environment
+set -e
 
 /usr/bin/php /yourls/migrate.php
-
-#!/bin/bash
-set -e
 
 # Note: we don't just use "apache2ctl" here because it itself is just a shell-script wrapper around apache2 which provides extra functionality like "apache2ctl start" for launching apache2 in the background.
 # (also, when run as "apache2ctl <apache args>", it does not use "exec", which leaves an undesirable resident shell process)
