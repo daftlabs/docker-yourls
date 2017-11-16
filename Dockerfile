@@ -3,9 +3,9 @@ FROM ubuntu:14.04
 ENV APP_ROOT /yourls
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN mkdir -p ${APP_ROOT} \
-  && apt-get update \
-  && apt-get install -y  --force-yes curl apache2 supervisor libapache2-mod-php5 php5-mysql \
+RUN mkdir -p ${APP_ROOT} 
+RUN apt-get update \
+  && apt-get install -y --force-yes curl apache2 supervisor libapache2-mod-php5 php5-mysql \
   && unset ${DEBIAN_FRONTEND} \
   && rm -rf /var/lib/apt/lists/* \
   && curl -L https://github.com/YOURLS/YOURLS/archive/1.7.1.tar.gz | tar -zx -C ${APP_ROOT} --strip-components=1 \
@@ -20,6 +20,7 @@ COPY docker/vhost.conf /etc/apache2/sites-enabled/000-default.conf
 COPY docker/config.php ${APP_ROOT}/user/config.php
 COPY docker/migrate.php ${APP_ROOT}/migrate.php
 COPY docker/.htaccess ${APP_ROOT}/.htaccess
+COPY docker/index.php ${APP_ROOT}/index.php
 
 WORKDIR ${APP_ROOT}
 

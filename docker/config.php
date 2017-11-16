@@ -85,6 +85,9 @@ define( 'YOURLS_URL_CONVERT', getenv('YOURLS_URL_CONVERT') ?: 32 );
  * 62: generates mixed case keywords (ie: 13jKm or 13JKm)
  * Stick to one setting. It's best not to change after you've started creating links.
  */
+/** OPTION to store plain text password. enabled by default
+*/
+define( 'YOURLS_NO_HASH_PASSWORD', getenv('YOURL_NO_HASH_PASSWORD') ?: true );
 
 /**
 * Reserved keywords (so that generated URLs won't match them)
