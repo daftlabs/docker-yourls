@@ -6,7 +6,7 @@ db:
     - MYSQL_ROOT_PASSWORD=coolpassword
     - MYSQL_DATABASE=yourls
 web:
-  image: darmagedon/yourls:1.7
+  build: .
   ports:
     - "80:80"
   links:
@@ -18,5 +18,5 @@ web:
     - YOURLS_DB_HOST=db
     - YOURLS_DEBUG=false
     - YOURLS_USERS=default:default
-    - YOURLS_SITE=http://mysite.local.com/
-    - YOURL_INDEX_WEBSITE=https://www.lftechnology.com/
+    - YOURLS_SITE=http://set-this-or-the-site-doesnt-work.com
+    - YOURLS_INDEX_WEBSITE=https://github.com/

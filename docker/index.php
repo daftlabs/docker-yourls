@@ -1,1 +1,1 @@
-<?php header('Location: getenv('YOURL_INDEX_WEBSITE') ?: http://openmrs.org/'); ?>
+<?php header("Location: ".(getenv('YOURLS_INDEX_WEBSITE') ?: "http://yourls.org/")); ?>
