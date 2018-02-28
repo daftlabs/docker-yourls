@@ -18,4 +18,5 @@ web:
     - YOURLS_DB_HOST=db
     - YOURLS_DEBUG=false
     - YOURLS_USERS=default:default
-    - YOURLS_SITE=http://set-this-or-the-site-doesnt-work.com/my-blog.asp
+    - YOURLS_SITE=http://set-this-or-the-site-doesnt-work.com
+    - YOURLS_INDEX_WEBSITE=https://github.com/

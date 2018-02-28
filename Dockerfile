@@ -20,6 +20,7 @@ COPY docker/vhost.conf /etc/apache2/sites-enabled/000-default.conf
 COPY docker/config.php ${APP_ROOT}/user/config.php
 COPY docker/migrate.php ${APP_ROOT}/migrate.php
 COPY docker/.htaccess ${APP_ROOT}/.htaccess
+COPY docker/index.php ${APP_ROOT}/index.php
 
 WORKDIR ${APP_ROOT}
 
